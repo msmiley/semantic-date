@@ -7,6 +7,7 @@ srcDir = 'src'
 libDir = 'lib'
 coffee = path.normalize("./node_modules/.bin/coffee")
 jasmine = path.normalize("./node_modules/.bin/jasmine-node")
+docco = path.normalize("./node_modules/.bin/docco")
 
 task 'watch', 'Watch source files and build changes', ->
   watch = spawn coffee, ['-cw', '--no-header', '-o', libDir, srcDir]
