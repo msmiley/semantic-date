@@ -6,8 +6,8 @@
   "main": "./lib",
   "repository": "mikesmiley/npm-template.git",
   "scripts": {
-    "doc": "./node_modules/.bin/docco src/",
-    "prepublish": "cake build test",
+    "doc": "cake doc",
+    "prepublish": "cake build test doc",
     "test": "cake test"
   },
   "devDependencies": {
@@ -16,7 +16,7 @@
     "jasmine-node": "^1.14.5"
   },
   "dependencies": {
-    
+
   },
   "keywords": [
   ],
