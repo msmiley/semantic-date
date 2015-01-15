@@ -2,9 +2,9 @@
   "name": "",
   "version": "0.0.0",
   "author": "Mike Smiley <mikesmiley@me.com>",
-  "url": "https://github.com/mikesmiley/",
+  "url": "https://github.com/msmiley/",
   "main": "./lib",
-  "repository": "mikesmiley/.git",
+  "repository": "msmiley/.git",
   "scripts": {
     "doc": "cake doc",
     "prepublish": "cake build test doc",
