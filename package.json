@@ -1,14 +1,14 @@
 {
   "name": "",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "author": "Mike Smiley <mikesmiley@me.com>",
   "url": "https://github.com/mikesmiley/",
   "main": "./lib",
-  "repository": "mikesmiley/npm-template.git",
+  "repository": "mikesmiley/.git",
   "scripts": {
     "doc": "cake doc",
     "prepublish": "cake build test doc",
-    "test": "cake test"
+    "test": "cake build test"
   },
   "devDependencies": {
     "docco": "*",
