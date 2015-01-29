@@ -1,4 +1,4 @@
 
-{ SemanticDateRange } = require('./semantic-date')
+{ SemanticDate } = require('./semantic-date')
 
-module.exports = SemanticDateRange
+module.exports = SemanticDate

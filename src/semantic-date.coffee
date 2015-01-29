@@ -15,7 +15,7 @@ class SemanticDate
       start: new Date(now - 3600000)
       end: now
   ,
-    match: /^last ?24(h| hours)$/i
+    match: /^(last|past) ?24(h| hours)$/i
     func: (now) ->
       start: new Date(now - 86400000)
       end: now
@@ -86,4 +86,4 @@ class SemanticDate
 # Exports, browser compatible
 #
 root = exports ? window
-root.SemanticDateRange = new SemanticDateRange()
+root.SemanticDate = new SemanticDate()
