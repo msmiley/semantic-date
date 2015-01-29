@@ -1,10 +1,10 @@
 {
-  "name": "",
-  "version": "0.0.0",
+  "name": "semantic-date",
+  "version": "0.1.0",
   "author": "Mike Smiley <mikesmiley@me.com>",
-  "url": "https://github.com/msmiley/",
+  "url": "https://github.com/msmiley/semantic-date",
   "main": "./lib",
-  "repository": "msmiley/.git",
+  "repository": "msmiley/semantic-date.git",
   "scripts": {
     "doc": "cake doc",
     "prepublish": "cake build test doc",
@@ -16,9 +16,11 @@
     "jasmine-node": "^1.14.5"
   },
   "dependencies": {
-
   },
   "keywords": [
+    "natural language",
+    "date",
+    "interval"
   ],
   "license": "MIT"
 }
