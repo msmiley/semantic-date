@@ -25,19 +25,23 @@ semanticDate.convert "last year"
 
 The following are the semantic dates which are currently understood. More and more permutations of the current ones will be added over time. Feel free to send me a PR with your favorite form.
 
-- last minute
-- last hour
-- last/past 24h/hours
+- last minute (up to current time)
+- last hour (up to current time)
+- last/past 24h/hours (up to current time)
 - yesterday
-- last week
-- last month
-- last year
-- today
-- this week
-- this month
-- this year
-- since 1970
+- last week (week before the current)
+- past week (7 days)
+- last month (month before the current)
+- past month (30 days)
+- last year (year before the current)
+- past year (365 days)
+- today (up to current time)
+- this week (up to current time)
+- this month (up to current time)
+- this year (up to current time)
+- since 1970 (up to current time)
 
+Hypens and underscores are supported in place of spaces.
 
 ## Testing
 

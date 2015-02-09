@@ -5,17 +5,17 @@
 class SemanticDate
   # Define a set of parsers to handle semantic date specifications.
   parsers: [
-    match: /^last ?minute$/i
+    match: /^last[ _\-]?minute$/i
     func: (now) ->
       start: new Date(now - 60000)
       end: now
   ,
-    match: /^last ?hour$/i
+    match: /^last[ _\-]?hour$/i
     func: (now) ->
       start: new Date(now - 3600000)
       end: now
   ,
-    match: /^(last|past) ?24(h| hours)$/i
+    match: /^(last|past)[ _\-]?24(h| hours)$/i
     func: (now) ->
       start: new Date(now - 86400000)
       end: now
@@ -25,44 +25,59 @@ class SemanticDate
       start: new Date(new Date(now.getFullYear(), now.getMonth(), now.getDate()) - 86400000)
       end: new Date(now.getFullYear(), now.getMonth(), now.getDate())
   ,
-    match: /^last ?week$/i
+    match: /^last[ _\-]?week$/i
     func: (now) ->
       start: new Date(new Date(now.getFullYear(), now.getMonth(), now.getDate()) - now.getDay() * 86400000 - 604800000)
       end: new Date(new Date(now.getFullYear(), now.getMonth(), now.getDate()) - now.getDay() * 86400000)
   ,
-    match: /^last ?month$/i
+    match: /^past[ _\-]?week$/i
+    func: (now) ->
+      start: new Date(now - 604800000)
+      end: now
+  ,
+    match: /^last[ _\-]?month$/i
     func: (now) ->
       month = now.getMonth() - 1
       month = 11  if month < 0
       start: new Date(now.getFullYear(), month, 1)
       end: new Date(now.getFullYear(), now.getMonth(), 1)
   ,
-    match: /^last ?year$/i
+    match: /^past[ _\-]?month$/i
+    func: (now) ->
+      start: new Date(now - 2592000000)
+      end: now
+  ,
+    match: /^last[ _\-]?year$/i
     func: (now) ->
       start: new Date(now.getFullYear() - 1, 0, 1)
       end: new Date(now.getFullYear(), 0, 1)
+  ,
+    match: /^past[ _\-]?year$/i
+    func: (now) ->
+      start: new Date(now - 31536000000)
+      end: now
   ,
     match: /^today$/i
     func: (now) ->
       start: new Date(now.getFullYear(), now.getMonth(), now.getDate())
       end: now
   ,
-    match: /^this ?week$/i
+    match: /^this[ _\-]?week$/i
     func: (now) ->
       start: new Date(new Date(now.getFullYear(), now.getMonth(), now.getDate()) - now.getDay() * 86400000)
       end: now
   ,
-    match: /^this ?month$/i
+    match: /^this[ _\-]?month$/i
     func: (now) ->
       start: new Date(now.getFullYear(), now.getMonth(), 1)
       end: now
   ,
-    match: /^this ?year$/i
+    match: /^this[ _\-]?year$/i
     func: (now) ->
       start: new Date(now.getFullYear(), 0, 1)
       end: now
   ,
-    match: /^since ?1970$/i
+    match: /^since[ _\-]?1970$/i
     func: (now) ->
       start: new Date(1970, 0, 1)
       end: now
