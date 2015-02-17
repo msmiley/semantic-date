@@ -5,12 +5,12 @@
 class SemanticDate
   # Define a set of parsers to handle semantic date specifications.
   parsers: [
-    match: /^last[ _\-]?minute$/i
+    match: /^(last|past)[ _\-]?minute$/i
     func: (now) ->
       start: new Date(now - 60000)
       end: now
   ,
-    match: /^last[ _\-]?hour$/i
+    match: /^(last|past)[ _\-]?hour$/i
     func: (now) ->
       start: new Date(now - 3600000)
       end: now
