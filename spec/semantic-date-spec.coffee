@@ -10,6 +10,7 @@ describe "Semantic Date Parser", ->
     # check canonical forms of each date range for match
     expect(@sd.validate("last minute")).toBe true
     expect(@sd.validate("last hour")).toBe true
+    expect(@sd.validate("past hour")).toBe true
     expect(@sd.validate("last 24 hours")).toBe true
     expect(@sd.validate("last 24h")).toBe true
     expect(@sd.validate("yesterday")).toBe true
