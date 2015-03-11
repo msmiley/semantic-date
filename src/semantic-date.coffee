@@ -100,7 +100,7 @@ class SemanticDate
 #
 # Exports, browser compatible
 #
-if exports
+if typeof exports isnt "undefined" and exports isnt null
   module.exports = SemanticDate
-else if window
+else
   window.SemanticDate = SemanticDate
