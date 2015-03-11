@@ -1,0 +1,27 @@
+{
+  "name": "semantic-date",
+  "version": "0.1.4",
+  "homepage": "https://github.com/msmiley/semantic-date",
+  "authors": [
+    "Mike Smiley <msmiley@alumni.rice.edu>"
+  ],
+  "description": "Convert natural language time spans to Date objects",
+  "main": "lib/index.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "natural language",
+    "date",
+    "interval",
+    "human readable"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
