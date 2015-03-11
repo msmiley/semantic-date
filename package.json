@@ -3,12 +3,12 @@
   "version": "0.1.4",
   "author": "Mike Smiley <msmiley@alumni.rice.edu>",
   "url": "https://github.com/msmiley/semantic-date",
-  "main": "./lib",
+  "main": "./lib/semantic-date.js",
   "repository": "msmiley/semantic-date.git",
   "scripts": {
     "docs": "cake docs",
-    "prepublish": "cake build; cake test docs",
-    "test": "cake build; cake test"
+    "prepublish": "cake build & cake test docs",
+    "test": "cake build & cake test"
   },
   "devDependencies": {
     "docco": "*",

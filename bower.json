@@ -6,7 +6,7 @@
     "Mike Smiley <msmiley@alumni.rice.edu>"
   ],
   "description": "Convert natural language time spans to Date objects",
-  "main": "lib/index.js",
+  "main": "lib/semantic-date.js",
   "moduleType": [
     "globals"
   ],

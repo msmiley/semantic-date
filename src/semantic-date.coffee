@@ -4,7 +4,7 @@
 #
 class SemanticDate
   # Define a set of parsers to handle semantic date specifications.
-  parsers: [
+  @parsers = [
     match: /^(last|past)[ _\-]?minute$/i
     func: (now) ->
       start: new Date(now - 60000)
@@ -84,13 +84,13 @@ class SemanticDate
   ]
 
   # Perform validation of the given semantic date string. Returns true if the string is supported, false otherwise.
-  validate: (str) ->
+  @validate: (str) ->
     for p in @parsers
       return true if str.match p.match
     return false
 
   # Convert the given semantic date string to an object with start and end Date objects.
-  convert: (str) ->
+  @convert: (str) ->
     now = new Date()
     for p in @parsers
       if str.match p.match
@@ -100,5 +100,7 @@ class SemanticDate
 #
 # Exports, browser compatible
 #
-root = exports ? window
-root.SemanticDate = new SemanticDate()
+if exports
+  module.exports = SemanticDate
+else if window
+  window.SemanticDate = SemanticDate
