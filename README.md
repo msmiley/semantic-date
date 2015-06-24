@@ -24,9 +24,9 @@ semanticDate.convert "last year"
 Provide a Date object as the second parameter to convert to use that date as the reference:
 
 ```coffee
-semanticDate.convert "last hour", 
-> { start: Wed Jan 01 2014 00:00:00 GMT-0500 (EST),
-    end: Thu Jan 01 2015 00:00:00 GMT-0500 (EST) }
+semanticDate.convert "last hour", new Date(2011, 3, 4, 3, 0, 0)
+> { start: Mon Apr 04 2011 02:00:00 GMT-0400 (EDT),
+  end: Mon Apr 04 2011 03:00:00 GMT-0400 (EDT) }
 ```
 
 ### Supported Semantics
