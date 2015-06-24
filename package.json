@@ -7,8 +7,8 @@
   "repository": "msmiley/semantic-date.git",
   "scripts": {
     "docs": "cake docs",
-    "prepublish": "cake build & cake test docs",
-    "test": "cake build & cake test"
+    "prepublish": "cake build && cake test docs",
+    "test": "cake build && cake test"
   },
   "devDependencies": {
     "docco": "*",

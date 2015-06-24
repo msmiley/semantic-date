@@ -90,8 +90,9 @@ class SemanticDate
     return false
 
   # Convert the given semantic date string to an object with start and end Date objects.
-  @convert: (str) ->
-    now = new Date()
+  @convert: (str, now) ->
+    unless now
+      now = new Date()
     for p in @parsers
       if str.match p.match
         return p.func(now)

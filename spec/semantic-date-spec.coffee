@@ -28,4 +28,5 @@ describe "Semantic Date Parser", ->
     expect(@sd.validate("thisWeek")).toBe true
     expect(@sd.validate("YESTERDAY")).toBe true
 
-  # it "should correctly interpret date ranges", ->
+  it "should correctly calculate a range with given datum", ->
+    expect(JSON.stringify(@sd.convert("last hour", new Date(2011, 3, 4, 3, 0, 0)))).toBe '{"start":"2011-04-04T06:00:00.000Z","end":"2011-04-04T07:00:00.000Z"}'

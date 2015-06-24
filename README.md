@@ -21,6 +21,14 @@ semanticDate.convert "last year"
     end: Thu Jan 01 2015 00:00:00 GMT-0500 (EST) }
 ```
 
+Provide a Date object as the second parameter to convert to use that date as the reference:
+
+```coffee
+semanticDate.convert "last hour", 
+> { start: Wed Jan 01 2014 00:00:00 GMT-0500 (EST),
+    end: Thu Jan 01 2015 00:00:00 GMT-0500 (EST) }
+```
+
 ### Supported Semantics
 
 The following are the semantic dates which are currently understood. More and more permutations of the current ones will be added over time. Feel free to send me a PR with your favorite form.
